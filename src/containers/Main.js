@@ -33,6 +33,8 @@ class Main extends Component {
 	constructor(props) {
 		super(props);
 
+		document.title = "CXI - Web solutions";
+
 		this.hashOver = this.hashOverH.bind(this);
 		this.hashOut = this.hashOutH.bind(this);
 		this.mover = this.moverH.bind(this);
@@ -165,7 +167,7 @@ class Main extends Component {
 		}
 	}
 	componentWillUnmount() {
-		
+
 	}
 
 	hashOverH(block, i){
@@ -195,10 +197,10 @@ class Main extends Component {
 		// this.hoverXY = [e.nativeEvent.offsetX, e.nativeEvent.offsetY]
 	}
 
-	render() {	
+	render() {
 		return (
 			<div>
-				<MainC state={this.state} lang={this.props.lang} 
+				<MainC state={this.state} lang={this.props.lang}
 					hashOver={this.hashOver} hashOut={this.hashOut} mover={this.mover} />
 			</div>
 		)

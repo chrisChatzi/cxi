@@ -78,8 +78,8 @@ $headerMain: #213132;
 	::-webkit-scrollbar-thumb {
 	 	-webkit-border-radius: 2px;
 	 	border-radius: 2px;
-		background: #f0f0f0; 
-	}	
+		background: #f0f0f0;
+	}
 	input, select{
 		@include setDims("", auto, 32px, 5px 0, 0 5px);
 		@include setBorders(4px, 1px solid #ddd);
@@ -323,13 +323,13 @@ $headerMain: #213132;
 			100% { transform: rotateX(0);   }
 		}
 
-	@keyframes go1 { 
+	@keyframes go1 {
 		0%{ left: 5px; }
 		10%{ left: -5px; }
 		20%{ left: -5px; }
 		100%{ left: 100% }
 	}
-	@keyframes go2 { 
+	@keyframes go2 {
 		0%{ left: -20px; }
 		40%{ transform: scale(1.5); }
 		80%{ transform: scale(1); }
@@ -491,6 +491,8 @@ $headerMain: #213132;
 					    text-shadow: 5px 5px 2px rgba(0,0,0,0.5);
 					}
 					.txt{
+						font-size: 1.1em;
+						font-weight: normal;
 						margin: 5px 0;
 						padding: 10px 20px;
 						background: #56565b;
@@ -552,7 +554,7 @@ $headerMain: #213132;
 								.dover{ display: none; }
 							}
 						}
-						.item:nth-child(even){ 
+						.item:nth-child(even){
 							@include setColors(#f5f5f5, #20948b);
 							&:hover{
 								text-shadow: none;
@@ -563,7 +565,7 @@ $headerMain: #213132;
 				}
 			}
 	}
-	
+
 /*TECH*/
 	.tech{
 		@include setAbsolute(60px, 0, 0, 0, 100%, auto);
@@ -608,6 +610,8 @@ $headerMain: #213132;
 					background-size: 300% 300%;
 					text-decoration: none;
 					margin: -rem(10px);
+					font-size: 1em;
+					font-weight: normal;
 					&:not(.active):hover{
 						color: #ccc;
 						border: 2px solid rgba($color1, 0);
@@ -826,7 +830,7 @@ $headerMain: #213132;
 						}
 						@media (max-width: $max3){
 							@include grid(2*$bxs, auto, 3*$bxs, auto, 2, 3, $bxs);
-						} 
+						}
 					}
 					.css{
 						background: radial-gradient(ellipse at center,  #2980b9 0%,#1c5981 100%);
@@ -854,7 +858,7 @@ $headerMain: #213132;
 						}
 						@media (max-width: $max3){
 							@include grid(3*$bxs, auto, 0, auto, 3, 2, $bxs);
-						} 
+						}
 					}
 					.sass{
 						background: radial-gradient(ellipse at center,  #d2527f 0%,#933958 100%);
@@ -868,7 +872,7 @@ $headerMain: #213132;
 						}
 						@media (max-width: $max3){
 							@include grid(2*$bxs, auto, 5*$bxs, auto, 2, 1, $bxs);
-						} 
+						}
 					}
 					.grunt{
 						background: radial-gradient(ellipse at center,  #e48632 0%,#9f5d23 100%);
@@ -882,7 +886,7 @@ $headerMain: #213132;
 						}
 						@media (max-width: $max3){
 							@include grid(5*$bxs, auto, 0, auto, 2, 1, $bxs);
-						} 
+						}
 					}
 					.karma{
 						background: radial-gradient(ellipse at center,  #16a085 0%,#0f705d 100%);
@@ -896,7 +900,7 @@ $headerMain: #213132;
 						}
 						@media (max-width: $max3){
 							@include grid(5*$bxs, auto, 2*$bxs, auto, 3, 1, $bxs);
-						} 
+						}
 					}
 				}
 				.back{
@@ -1155,7 +1159,7 @@ $headerMain: #213132;
 						perspective-origin: 0 0;
 						margin-top: 340px;
 					}
-					
+
 					.cube {
 						position: relative;
 						width: $transformVar*2;
@@ -1248,7 +1252,7 @@ $headerMain: #213132;
 							cursor: pointer;
 						}
 
-						.spinner .face1 { 
+						.spinner .face1 {
 							transform: translateZ($transformVarSmall);
 							img{
 								width: 30px;
@@ -1258,18 +1262,18 @@ $headerMain: #213132;
 							}
 						}
 						.spinner .face2 {
-							transform: rotateY(90deg) translateZ($transformVarSmall); 
+							transform: rotateY(90deg) translateZ($transformVarSmall);
 						}
-						.spinner .face3 { 
-							transform: rotateY(90deg) rotateX(90deg) translateZ($transformVarSmall); 
+						.spinner .face3 {
+							transform: rotateY(90deg) rotateX(90deg) translateZ($transformVarSmall);
 						}
-						.spinner .face4 { 
-							transform: rotateY(180deg) rotateZ(180deg) translateZ($transformVarSmall); 
+						.spinner .face4 {
+							transform: rotateY(180deg) rotateZ(180deg) translateZ($transformVarSmall);
 						}
 						.spinner .face5 {
-							transform: rotateY(-90deg) rotateZ(90deg) translateZ($transformVarSmall); 
+							transform: rotateY(-90deg) rotateZ(90deg) translateZ($transformVarSmall);
 						}
-						.spinner .face6 { 
+						.spinner .face6 {
 							transform: rotateX(-90deg) translateZ($transformVarSmall);
 							color: #ccc;
 							text-shadow: 5px 5px 3px rgba(0,0,0,0.5);
@@ -1322,6 +1326,9 @@ $headerMain: #213132;
 						float: left;
 						padding-left: 10px;
 						opacity: 0;
+						font-size: 1em;
+						font-weight: normal;
+						margin: 0;
 						transform: translate(0, -50px);
 					}
 					@media (max-width: 800px){
@@ -1442,7 +1449,7 @@ $headerMain: #213132;
 								@include setColors(#c99e10, #1e434c);
 							}
 						}
-						
+
 						.title{
 							@include setHeight(30px);
 							text-align: left;

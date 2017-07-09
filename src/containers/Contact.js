@@ -37,6 +37,8 @@ class Contact extends Component {
 	constructor(props) {
 		super(props);
 
+		document.title = "CXI - Contact";
+
 		this.interval = 0;
 		this.hoveredEl = "";
 
@@ -116,7 +118,7 @@ class Contact extends Component {
 	componentWillUnmount(){
 		clearInterval(this.interval);
 	}
-	
+
 
 	nameGoH(e){ this.setState({name : e.target.value}); this.checkForm(); }
 	mailGoH(e){ this.setState({mail : e.target.value}); this.checkForm(); }
@@ -164,7 +166,7 @@ class Contact extends Component {
 			};
 			ajax.ajaxRequest(options, (res) => {
 				if(res.type == "ok") alert("Message has been sent");
-			}); 
+			});
 		}
 	}
 
@@ -184,22 +186,22 @@ class Contact extends Component {
 	socialClickH(i){
 		let win = "";
 		switch(i){
-			case 2: 
+			case 2:
 				win = window.open("https://github.com/chrisChatzi", '_blank');
 				win.focus();
 			break;
-			case 3: 
+			case 3:
 				win = window.open("https://www.npmjs.com/~christos.chatzi", '_blank');
 				win.focus();
 			break;
-			case 4: 
+			case 4:
 				win = window.open("https://www.linkedin.com/in/christos-chatziioannidis-097a2166/", '_blank');
 				win.focus();
 			break;
 		}
 	}
 
-	render() {	
+	render() {
 		let { nameGo, mailGo, titleGo, txtGo, msg, socialOver, socialOut, socialClick } = this
 
 		return (

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
                     // rulePaths: ['conf/rules']
                 },
                 target: ['./src/**/*.js']
-            
+
         },
         sass: {
                 options: {
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     options: {
                         transform: [
                             [
-                                'babelify', 
+                                'babelify',
                                 {
                                     'presets': ["react", "es2015"]
                                 }
@@ -36,6 +36,19 @@ module.exports = function(grunt) {
                         ]
                     }
                 }
+        },
+        uglify: {
+            options: {
+                mangle: false,
+                compress: {
+                    drop_console: true
+                }
+            },
+            my_target: {
+                files: {
+                    '../cxi-server/dist/bundle.min.js': ['./dist/bundle.js']
+                }
+            }
         }
     });
 
@@ -43,6 +56,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-eslint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask("default", ["eslint", 'sass', "browserify", /*"uglify"*/]);
+    grunt.registerTask("default", ["eslint", 'sass', "browserify", "uglify"]);
 };

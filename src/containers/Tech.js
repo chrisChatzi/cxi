@@ -35,6 +35,8 @@ class Tech extends Component {
 	constructor(props) {
 		super(props);
 
+		document.title = "CXI - Tech stack";
+
 		this.timer = 0;
 		this.timeout = 0;
 
@@ -243,8 +245,8 @@ class Tech extends Component {
 	render() {
 		return (
 			<div>
-				<TechC state={this.state} lang={this.props.lang} 
-					hover={this.hover} tab={this.tab} 
+				<TechC state={this.state} lang={this.props.lang}
+					hover={this.hover} tab={this.tab}
 					hoverType={this.hoverType} houtType={this.houtType} />
 			</div>
 		)

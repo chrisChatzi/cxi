@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 
-const Contact = ( { state, lang, nameGo, mailGo, titleGo, txtGo, msg, 
+const Contact = ( { state, lang, nameGo, mailGo, titleGo, txtGo, msg,
 					socialOver, socialOut, socialClick } ) => (
 	<div className="contact">
-	{/*title*/}
+		{/*title*/}
 		<div className="titleTop">
 			<div id="line" className="line lineTop"></div>
 			<div id="" className="text">
@@ -17,38 +17,38 @@ const Contact = ( { state, lang, nameGo, mailGo, titleGo, txtGo, msg,
 			</div>
 			<div id="line2" className="line lineBot"></div>
 		</div>
-	{/*msg*/}
+		{/*msg*/}
 		<div className="msg">
 			{/*send msg*/}
 			<div className="half">
 				<div className="msg-icon"><i className="fa fa-2x fa-envelope"></i></div>
-				<div className="msg-title">
+				<h1 className="msg-title">
 					<span className="words">Send</span>
 					<span className="words">a</span>
 					<span className="words">message</span>
-				</div>
+				</h1>
 				<div className="msg-main">
 					<div className="row">
-						<input className={(state.nameCheck ? "error" : "")} type="text" 
+						<input className={(state.nameCheck ? "error" : "")} type="text"
 							placeholder="Name" value={state.name} onChange={nameGo} />
 					</div>
 					<div className="row">
-						<input className={(state.mailCheck ? "error" : "")} type="text" 
+						<input className={(state.mailCheck ? "error" : "")} type="text"
 							placeholder="Email" value={state.mail} onChange={mailGo}/>
 					</div>
 					<div className="row">
-						<input type="text" 
+						<input type="text"
 							placeholder="Title"  value={state.title} onChange={titleGo}/>
 					</div>
 					<div className="row txt">
-						<textarea className={(state.txtCheck ? "error" : "")} 
+						<textarea className={(state.txtCheck ? "error" : "")}
 							placeholder="Message" value={state.txt} onChange={txtGo}/>
 					</div>
 					<div className="row send"><button onClick={msg}>Send</button></div>
 				</div>
 			</div>
 			<div className="half">
-			{/*info cube*/}
+				{/*info cube*/}
 				<div className="infoCube">
 					<div className="wrap">
 						<div id="cube" className="cube">
@@ -138,7 +138,7 @@ const Contact = ( { state, lang, nameGo, mailGo, titleGo, txtGo, msg,
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 const Tech = ( { state, lang, hover, tab, hoverType, houtType } ) => (
 	<div className="tech">
-	{/*title*/}
+		{/*title*/}
 		<div className="titleTop">
 			<div id="line" className="line lineTop"></div>
 			<div id="" className="text">
@@ -19,18 +19,18 @@ const Tech = ( { state, lang, hover, tab, hoverType, houtType } ) => (
 			</div>
 			<div id="line2" className="line lineBot"></div>
 		</div>
-	{/*main*/}
+		{/*main*/}
 		{/*buttons*/}
-			<div className="buttons">
-				<div className={(state.active == "front") ? "button active" : "button"}
-					onClick={()=>tab("front")}>
-					Frontend
-				</div>		
-				<div className={(state.active == "back") ? "button active" : "button"}
-					onClick={()=>tab("back")}>
-					Backend
-				</div>		
-			</div>
+		<div className="buttons">
+			<h1 className={(state.active == "front") ? "button active" : "button"}
+				onClick={()=>tab("front")}>
+				Frontend
+			</h1>
+			<h1 className={(state.active == "back") ? "button active" : "button"}
+				onClick={()=>tab("back")}>
+				Backend
+			</h1>
+		</div>
 		{/*grid*/}
 			<div className="grid">
 			{/*front*/}
@@ -44,13 +44,13 @@ const Tech = ( { state, lang, hover, tab, hoverType, houtType } ) => (
 								</div>
 								<div className="title">{v.title}</div>
 							</div>
-							<div className={(state.hover == v.type) ? "content show " : 
+							<div className={(state.hover == v.type) ? "content show " :
 										"content hidden "}
 								onMouseOver={()=>hoverType(i,"f")} onMouseOut={()=>houtType(i)}>
 									<div id={"info1-"+i} className="small">
 										<img id={"img-"+i} src={v.img} />
 									</div>
-									{v.info.map( (v,iI) => 
+									{v.info.map( (v,iI) =>
 										<div key={iI} id={"info"+(iI+2)+"-"+i} className="small smallHidden">
 											{v}
 										</div>
@@ -68,13 +68,13 @@ const Tech = ( { state, lang, hover, tab, hoverType, houtType } ) => (
 								<div className="img"><img src={v.img} /></div>
 								<div className="title">{v.title}</div>
 							</div>
-							<div className={(state.hover == v.type) ? "content show "+v.type : 
+							<div className={(state.hover == v.type) ? "content show "+v.type :
 										"content hidden "+v.type}
 								onMouseOver={()=>hoverType(i,"b")} onMouseOut={()=>houtType(i)}>
 									<div id={"infoB1-"+i} className="small">
 										<img id={"imgB-"+i} src={v.img} />
 									</div>
-									{v.info.map( (v,iI) => 
+									{v.info.map( (v,iI) =>
 										<div key={iI} id={"infoB"+(iI+2)+"-"+i} className="small smallHidden">
 											{v}
 										</div>

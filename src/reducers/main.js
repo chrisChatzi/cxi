@@ -1,4 +1,5 @@
 import init from '../initialState'
+// import 'babel-core/polyfill'
 
 const state_update = (state = init.main, action) => {
 	let newstate = Object.assign({}, state);

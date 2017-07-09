@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 const Main = ( { state, lang, hashOver, hashOut, mover } ) => (
 	<div className="main">
-	{/*title*/}
+		{/*title*/}
 		<div className="titleTop">
 			<div id="line" className="line lineTop"></div>
 			<div id="" className="text">
@@ -22,16 +22,16 @@ const Main = ( { state, lang, hashOver, hashOut, mover } ) => (
 			</div>
 			<div id="line2" className="line lineBot"></div>
 		</div>
-	{/*boxes*/}
+		{/*boxes*/}
 		<div id="boxes" className="boxes">
 			{state.box.map( (v,i) =>
 				<div key={i} id={"box"+(i+1)} className={"box box"+(i+1)} >
 					<div className={"dot"+(i+1)}></div>
 					<div id={"icon"+(i+1)} className="icon"><i className={"fa fa-4x fa-"+v.icon}></i></div>
-					<div className="title">{v.title}</div>
-					<div className="txt">
+					<h1 className="title">{v.title}</h1>
+					<h2 className="txt">
 						{v.txt}
-					</div>
+					</h2>
 					<div className="hashtags">
 						{v.hashtags.map( (vH, iH) =>
 							<div key={iH} className="item"
@@ -46,7 +46,7 @@ const Main = ( { state, lang, hashOver, hashOut, mover } ) => (
 								<div className="hover-title">{vH2.infoTitle}</div>
 								<div className="hover-txt">{vH2.infoTxt}</div>
 							</div>
-							<div id={"hoverIndex"+i+"-"+(iH2+1)} 
+							<div id={"hoverIndex"+i+"-"+(iH2+1)}
 								className={"hoverIndex hoverIndex"+(iH2+1)}></div>
 						</div>
 					)}
